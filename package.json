@@ -1,7 +1,7 @@
 {
   "name": "react-markup",
   "version": "0.1.0",
-  "main": "dist/index.js",
+  "main": "lib/index.js",
   "description": "Another one markup library for React.js inspired by hyperscript",
   "keywords": [
     "react",

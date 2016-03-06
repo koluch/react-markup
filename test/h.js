@@ -8,7 +8,7 @@
  */
 let assert = require('chai').assert;
 
-let markup = require('../dist/index')
+let markup = require('../lib/index')
 let h = markup.h
 
 let common = require('./_common');

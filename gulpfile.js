@@ -40,5 +40,4 @@ gulp.task('default', function() {
         .pipe(babel({presets:[babelPresetEs2015]}))
         .pipe(uglify())
         .pipe(gulp.dest(PROD_ROOT))
-
 })

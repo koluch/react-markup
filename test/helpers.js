@@ -8,7 +8,7 @@
  */
 let assert = require('chai').assert;
 
-let markup = require('../dist/index')
+let markup = require('../lib/index')
 
 let common = require('./_common');
 let byText = common.byText
@@ -26,7 +26,7 @@ describe('react-markup', () => {
             "noframes", "noscript", "object", "ol", "optgroup", "option", "output", "p", "param", "pre", "progress", "q",
             "rp", "rt", "ruby", "s", "samp", "script", "section", "select", "small", "source", "span", "strike",
             "strong", "style", "sub", "summary", "sup", "table", "tbody", "td", "textarea", "tfoot", "th", "thead",
-            "time", "title", "tr", "track", "tt", "u", "ul", "_var", "video", "wb"]
+            "time", "title", "tr", "track", "tt", "u", "ul", "var", "video", "wb"]
 
         let emptyTags = ["area","base","br","col","embed","menuitem","hr","img","input","keygen","link",
         "meta","param","source", "track", "textarea"]
@@ -35,12 +35,7 @@ describe('react-markup', () => {
         for(let i in tags) {
             let tag = tags[i];
 
-            if(tag === "_var") {
-                it('should properly render  empty var element', () => {
-                    assert.equal(byRender(markup._var("text content")), byText('<var>text content</var>'))
-                })
-            }
-            else if(tag === "textarea") {
+             if(tag === "textarea") {
                 it('should properly render  empty ' + tag + ' element', () => {
                     assert.equal(byRender(markup[tag]()), byText('<'+tag+'></'+tag+'>'))
                 })
