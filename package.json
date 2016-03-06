@@ -35,13 +35,5 @@
   "dependencies": {
     "es6-object-assign": "1.0.1",
     "react": "0.14.3"
-  },
-  "gulp": {
-    "src": {
-      "root": "./src"
-    },
-    "prod": {
-      "root": "./dist"
-    }
   }
 }
