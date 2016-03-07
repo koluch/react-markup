@@ -39,6 +39,61 @@ describe('react-markup', () => {
             );
         });
 
+        it('should properly parse id selector', () => {
+            assert.equal(
+                byRender(
+                    h("div#container")
+                ),
+                byText(
+                    '<div id="container"></div>'
+                )
+            );
+        });
+
+        it('should properly parse class name selector', () => {
+            assert.equal(
+                byRender(
+                    h("div.selected")
+                ),
+                byText(
+                    '<div class="selected"></div>'
+                )
+            );
+        });
+
+        it('should properly parse multiple class name selector', () => {
+            assert.equal(
+                byRender(
+                    h("div.selected.highlighted")
+                ),
+                byText(
+                    '<div class="selected highlighted"></div>'
+                )
+            );
+        });
+
+        it('should properly parse id and class name selector', () => {
+            assert.equal(
+                byRender(
+                    h("div#container.selected")
+                ),
+                byText(
+                    '<div class="selected" id="container"></div>'
+                )
+            );
+        });
+
+        it('should properly parse id and multiple class name selector', () => {
+            assert.equal(
+                byRender(
+                    h("div#container.selected.highlighted")
+                ),
+                byText(
+                    '<div class="selected highlighted" id="container"></div>'
+                )
+            );
+        });
+
         it('should properly rendered empty span with class name and text content', () => {
             assert.equal(
                 byRender(
