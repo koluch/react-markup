@@ -1,4 +1,5 @@
 # react-markup
+[![Build Status](https://travis-ci.org/koluch/react-markup.svg)](https://travis-ci.org/koluch/react-markup)
 
 Another one markup library for React.js inspired by hyperscript. It allows use valid JavaScript code instead of 
 JSX, like this:
