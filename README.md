@@ -17,17 +17,6 @@ h("div",
     h("div#footer.hidden", "(footer content)")
 )
 
-div([
-    div(".header.highlighted.hover",[
-        div(".title", "People List")
-    ]),
-    div(".body", people.map( person => (
-        div(".person", {key:person.id}, person.name)
-    ))),
-    div("#footer.hidden", "(footer content)")
-])
-
-
 // which analogue in JSX is:
 <div>
     <div id="header" className="highlighted hover">
@@ -42,6 +31,11 @@ div([
     </div>
     <div id="footer" className="hidden">(footer content)</div>
 </div> 
+```
+
+## Instalation
+```
+npm install --save react-markup
 ```
 
 ## Motivation
