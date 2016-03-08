@@ -1,6 +1,6 @@
 {
   "name": "react-markup",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "main": "lib/index.js",
   "description": "Another one markup library for React.js inspired by hyperscript",
   "keywords": [
