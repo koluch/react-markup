@@ -33,7 +33,7 @@ h("div",
 </div> 
 ```
 
-## Instalation
+## Installation
 ```
 npm install --save react-markup
 ```
