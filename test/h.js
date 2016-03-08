@@ -209,6 +209,22 @@ describe('react-markup', () => {
                 )
             );
         });
+
+        it('should properly work with null and undefined children', () => {
+            assert.equal(
+                byRender(
+                    h("div",
+                        {className:'item'},
+                        null,
+                        undefined,
+                        "text"
+                    )
+                ),
+                byText(
+                    '<div class="item"><span>text</span></div>'
+                )
+            );
+        });
     })
 
 })
