@@ -25,10 +25,10 @@
   "devDependencies": {
     "chai": "3.5.0",
     "mocha": "2.4.5",
-    "react-dom": "^0.14.0"
+    "react-dom": "^15.0.0 || ^0.14.0"
   },
   "dependencies": {
     "es6-object-assign": "^1.0.1",
-    "react": "^0.14.0"
+    "react": "^15.0.0 || ^0.14.0"
   }
 }
