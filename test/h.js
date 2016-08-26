@@ -115,8 +115,8 @@ describe('react-markup', () => {
                 ),
                 byText(
                     '<div class="header">' +
-                    '    <span>Some</span>' +
-                    '    <span>Text</span>' +
+                        '<span>Some</span>' +
+                        '<span>Text</span>' +
                     '</div>'
                 )
             )
@@ -132,43 +132,43 @@ describe('react-markup', () => {
                 ),
                 byText(
                     '<div>' +
-                    '    <span>Some</span>' +
-                    '    <span>Text</span>' +
+                        '<span>Some</span>' +
+                        '<span>Text</span>' +
                     '</div>'
                 )
             );
         });
 
 
-        it('should properly rendered div without attributes and children as array', () => {
+        it('should properly rendered div without attributes and children as an array', () => {
             assert.equal(
                 byRender(
                     h("div", [
-                        h("span", {key: "id48"}, "Child 1"),
-                        h("span", {key: "id52"}, "Child 2")
+                        h("span", "Child 1"),
+                        h("span", "Child 2")
                     ])
                 ),
                 byText(
                     '<div>' +
-                    '    <span data-reactid="id48">Child 1</span>' +
-                    '    <span data-reactid="id52">Child 2</span>' +
+                        '<span>Child 1</span>' +
+                        '<span>Child 2</span>' +
                     '</div>'
                 )
             );
         });
 
-        it('should properly rendered div with class name and children as array', () => {
+        it('should properly rendered div with class name and children as an array', () => {
             assert.equal(
                 byRender(
                     h("div", {className: "header"}, [
-                        h("span", {key: "id48"}, "Child 1"),
-                        h("span", {key: "id52"}, "Child 2")
+                        h("span", "Child 1"),
+                        h("span", "Child 2")
                     ])
                 ),
                 byText(
                     '<div class="header">' +
-                    '    <span data-reactid="id48">Child 1</span>' +
-                    '    <span data-reactid="id52">Child 2</span>' +
+                        '<span>Child 1</span>' +
+                        '<span>Child 2</span>' +
                     '</div>'
                 )
             );
@@ -178,15 +178,15 @@ describe('react-markup', () => {
             assert.equal(
                 byRender(
                     h("div", [
-                        h("span", {key: "id48"}, "Child 1"),
-                        h("span", {key: "id52"}, "Child 2")
+                        h("span", "Child 1"),
+                        h("span", "Child 2")
                     ], "header text")
                 ),
                 byText(
                     '<div>' +
-                    '    <span data-reactid="id48">Child 1</span>' +
-                    '    <span data-reactid="id52">Child 2</span>' +
-                    '    <span>header text</span>' +
+                        '<span>Child 1</span>' +
+                        '<span>Child 2</span>' +
+                        'header text' +
                     '</div>'
                 )
             );
@@ -196,15 +196,15 @@ describe('react-markup', () => {
             assert.equal(
                 byRender(
                     h("div", {className: "header"}, [
-                        h("span", {key: "id48"}, "Child 1"),
-                        h("span", {key: "id52"}, "Child 2")
+                        h("span", "Child 1"),
+                        h("span", "Child 2")
                     ], "header text")
                 ),
                 byText(
                     '<div class="header">' +
-                    '    <span data-reactid="id48">Child 1</span>' +
-                    '    <span data-reactid="id52">Child 2</span>' +
-                    '    <span>header text</span>' +
+                        '<span>Child 1</span>' +
+                        '<span>Child 2</span>' +
+                        'header text' +
                     '</div>'
                 )
             );
@@ -221,7 +221,7 @@ describe('react-markup', () => {
                     )
                 ),
                 byText(
-                    '<div class="item"><span>text</span></div>'
+                    '<div class="item">text</div>'
                 )
             );
         });
